@@ -1,4 +1,4 @@
-import { FastifyInstance, FastifyRequest, FastifyReply } from "fastify";
+﻿import { FastifyInstance, FastifyRequest, FastifyReply } from "fastify";
 import axios from "axios";
 import { serverLog } from "../../main/logger";
 import { decryptQrc } from "./qrc";
@@ -265,7 +265,6 @@ async function getSongUrl(
       hires: { filenamePrefix: "A000", type: 0 },
     };
     const q = qualityMap[quality] || qualityMap["high"];
-    const filename = `${q.filenamePrefix}${songMid}.mp3`;
 
     const response = await qmRequest("CgiGetVkey", "music.vkey.GetVkey", {
       guid: String(Math.floor(Math.random() * 10000000000)),
