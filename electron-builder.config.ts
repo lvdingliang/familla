@@ -143,14 +143,7 @@ const config: Configuration = {
   electronDownload: {
     mirror: "https://npmmirror.com/mirrors/electron/",
   },
-  publish: [
-    {
-      provider: "github",
-      owner: "lvdingliang",
-      repo: "familla",
-      releaseType: "release",
-    },
-  ],
+  publish: [],
 };
 
 export default config;
