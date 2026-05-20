@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="qqmusic-playlists">
     <div class="header">
       <n-h2 prefix="bar">
@@ -137,8 +137,7 @@ const handleImport = async () => {
         album: songInfo.album?.name || songInfo.albumname || "未知专辑",
         cover: songInfo.album?.pic || songInfo.cover || "",
         duration: (songInfo.interval || 0) * 1000,
-        type: "song",
-        source: "streaming",
+        type: "song",`n        free: 0 as const,`n        mv: null,`n        source: "streaming",
       };
 
       if (song.id) {

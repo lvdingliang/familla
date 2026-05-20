@@ -1,5 +1,5 @@
-import { personalFm, personalFmToTrash } from "@/api/rec";
-import { songQuality, songUrl, unlockSongUrl } from "@/api/song";
+﻿import { personalFm, personalFmToTrash } from "@/api/rec";
+import { songUrl, unlockSongUrl } from "@/api/song";
 import { useLyricManager } from "@/core/player/LyricManager";
 import {
   useDataStore,

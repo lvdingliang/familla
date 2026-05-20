@@ -1,4 +1,4 @@
-import { songLevelData } from "@/utils/meta";
+﻿import { songLevelData } from "@/utils/meta";
 
 export type MetaData = {
   id: number;
@@ -120,11 +120,11 @@ export type SongType = {
   /** 原始 ID（流媒体服务器的 ID） */
   originalId?: string;
   /** 流媒体服务器类型 */
-  serverType?: "navidrome" | "jellyfin" | "subsonic" | "opensubsonic" | "emby";
+  serverType?: "navidrome" | "jellyfin" | "subsonic" | "opensubsonic" | "emby" | "qqmusic";
   /** 流媒体服务器 ID */
   serverId?: string;
   /** 来源标记 */
-  source?: "streaming";
+  source?: "streaming" | "qqmusic";
   /** 标记 */
   mark?: number;
   /** ReplayGain 信息 */

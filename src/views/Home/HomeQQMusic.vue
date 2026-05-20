@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="home-qqmusic">
     <!-- 搜索入口 -->
     <div class="qq-search-area">
@@ -100,21 +100,19 @@ const Search = {
   },
 };
 import type { DataTableColumns } from "naive-ui";
-import { useSettingStore, useMusicStore, useStatusStore } from "@/stores";
+import { useSettingStore } from "@/stores";
 import { useSourceStore } from "@/stores/source";
 import CoverList from "@/components/List/CoverList.vue";
 import { qqMusicSearch, qqMusicTopList, qqMusicRecommend } from "@/api/qqmusic";
 
 const settingStore = useSettingStore();
-const musicStore = useMusicStore();
-const statusStore = useStatusStore();
 const sourceStore = useSourceStore();
 
 const searchKeyword = ref("");
 const loading = ref(false);
 const searchLoading = ref(false);
 const showSearchModal = ref(false);
-const qqRecData = reactive<Array<{ name: string; list: any[]; type: string }>>([]);
+const qqRecData = reactive<Array<{ name: string; list: any[]; type: "playlist" | "album" | "video" | "radio" }>>([]);
 const searchResults = ref<any[]>([]);
 
 // 搜索表格列

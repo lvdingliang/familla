@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="setting-type">
     <div class="set-list">
       <n-h3 prefix="bar"> 关于软件 </n-h3>
@@ -315,11 +315,7 @@ const communityData = [
     url: packageJson.github,
     icon: "Github",
   },
-  {
-    name: "官方博客",
-    url: packageJson.blog,
-    icon: "RssFeed",
-  },
+  
 ];
 
 // 更新日志数据
