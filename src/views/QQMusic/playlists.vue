@@ -7,7 +7,6 @@
       <n-text depth="3">浏览QQ音乐热门歌单，一键导入到本地</n-text>
     </div>
 
-    <!-- 导入方式 -->
     <n-card size="small" :bordered="false" class="import-card">
       <n-space vertical>
         <n-text strong>导入QQ音乐歌单</n-text>
@@ -28,7 +27,6 @@
       </n-space>
     </n-card>
 
-    <!-- 热门榜单 -->
     <div class="section">
       <n-h3 prefix="bar">
         <n-text>热门榜单</n-text>
@@ -45,7 +43,6 @@
       </n-spin>
     </div>
 
-    <!-- 推荐歌单 -->
     <div class="section">
       <n-h3 prefix="bar">
         <n-text>推荐歌单</n-text>
@@ -137,7 +134,10 @@ const handleImport = async () => {
         album: songInfo.album?.name || songInfo.albumname || "未知专辑",
         cover: songInfo.album?.pic || songInfo.cover || "",
         duration: (songInfo.interval || 0) * 1000,
-        type: "song",`n        free: 0 as const,`n        mv: null,`n        source: "streaming",
+        type: "song",
+        free: 0 as const,
+        mv: null,
+        source: "streaming",
       };
 
       if (song.id) {
